@@ -307,9 +307,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n6a-tX-BxH" userLabel="infoBlock">
                                 <rect key="frame" x="0.0" y="228.5" width="375" height="38"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Currency Conversion Fee (optional)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="daO-CX-0tD">
-                                        <rect key="frame" x="8" y="8" width="170.5" height="22"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currency Conversion Fee (optional)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="daO-CX-0tD">
+                                        <rect key="frame" x="8" y="13" width="170.5" height="12"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -322,7 +321,10 @@
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="VKN-yJ-6tp" secondAttribute="bottom" constant="8" id="3my-6a-Yt0"/>
                                     <constraint firstItem="VKN-yJ-6tp" firstAttribute="top" secondItem="n6a-tX-BxH" secondAttribute="top" constant="8" id="EYe-Py-zSK"/>
+                                    <constraint firstItem="daO-CX-0tD" firstAttribute="centerY" secondItem="VKN-yJ-6tp" secondAttribute="centerY" id="rQc-Df-FV1"/>
                                     <constraint firstAttribute="trailing" secondItem="VKN-yJ-6tp" secondAttribute="trailing" constant="8" id="xba-o3-r9V"/>
+                                    <constraint firstItem="VKN-yJ-6tp" firstAttribute="centerY" secondItem="n6a-tX-BxH" secondAttribute="centerY" id="xtp-CP-oke"/>
+                                    <constraint firstItem="daO-CX-0tD" firstAttribute="leading" secondItem="n6a-tX-BxH" secondAttribute="leading" constant="8" id="zjs-U9-Zff"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mqm-v7-Sgf" userLabel="Penel">
