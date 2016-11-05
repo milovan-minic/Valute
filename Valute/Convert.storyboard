@@ -51,7 +51,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kBW-EW-Heq">
                                                 <rect key="frame" x="0.0" y="0.0" width="93" height="53.5"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" secondItem="kBW-EW-Heq" secondAttribute="height" multiplier="93:53" priority="950" id="jdm-Wf-uKe"/>
+                                                    <constraint firstAttribute="width" secondItem="kBW-EW-Heq" secondAttribute="height" multiplier="1:1" priority="950" id="jdm-Wf-uKe"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="36"/>
                                                 <state key="normal" title="÷"/>
