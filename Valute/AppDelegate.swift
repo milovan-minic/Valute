@@ -13,9 +13,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        
+        let sb = UIStoryboard(name: "Convert", bundle: nil)
+        guard let nc = sb.instantiateInitialViewController() as? UINavigationController else {
+            fatalError("UINC not found")
+        }
+        window?.rootViewController = nc
+        
+        return true
+    
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        window?.makeKeyAndVisible()
+        
         return true
     }
 
