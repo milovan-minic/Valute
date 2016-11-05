@@ -308,16 +308,17 @@
                                 <rect key="frame" x="0.0" y="228.5" width="375" height="38"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currency Conversion Fee (optional)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="daO-CX-0tD">
-                                        <rect key="frame" x="8" y="13" width="170.5" height="12"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                        <nil key="textColor"/>
+                                        <rect key="frame" x="8" y="10" width="252.5" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VKN-yJ-6tp">
                                         <rect key="frame" x="345" y="8" width="22" height="22"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="VKN-yJ-6tp" secondAttribute="bottom" constant="8" id="3my-6a-Yt0"/>
                                     <constraint firstItem="VKN-yJ-6tp" firstAttribute="top" secondItem="n6a-tX-BxH" secondAttribute="top" constant="8" id="EYe-Py-zSK"/>
@@ -329,9 +330,27 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mqm-v7-Sgf" userLabel="Penel">
                                 <rect key="frame" x="0.0" y="92.5" width="375" height="128"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JvL-Cx-TNc" userLabel="left">
+                                        <rect key="frame" x="0.0" y="0.0" width="187" height="128"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="liE-L7-WWC" userLabel="right">
+                                        <rect key="frame" x="188" y="0.0" width="187" height="128"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="liE-L7-WWC" firstAttribute="leading" secondItem="JvL-Cx-TNc" secondAttribute="trailing" constant="1" id="1x2-8C-3UT"/>
+                                    <constraint firstItem="liE-L7-WWC" firstAttribute="top" secondItem="Mqm-v7-Sgf" secondAttribute="top" id="57W-5a-mOd"/>
+                                    <constraint firstItem="JvL-Cx-TNc" firstAttribute="width" secondItem="liE-L7-WWC" secondAttribute="width" id="Os4-kw-UKW"/>
+                                    <constraint firstAttribute="trailing" secondItem="liE-L7-WWC" secondAttribute="trailing" id="Zr8-DN-daq"/>
+                                    <constraint firstItem="JvL-Cx-TNc" firstAttribute="leading" secondItem="Mqm-v7-Sgf" secondAttribute="leading" id="bhy-kK-Td6"/>
+                                    <constraint firstItem="JvL-Cx-TNc" firstAttribute="top" secondItem="Mqm-v7-Sgf" secondAttribute="top" id="k07-Qr-KdI"/>
+                                    <constraint firstAttribute="bottom" secondItem="liE-L7-WWC" secondAttribute="bottom" id="rku-NJ-akZ"/>
                                     <constraint firstAttribute="height" constant="128" id="wLu-aB-dlh"/>
+                                    <constraint firstAttribute="bottom" secondItem="JvL-Cx-TNc" secondAttribute="bottom" id="xPT-VC-MGe"/>
                                 </constraints>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d9Y-bd-n8H" userLabel="spacerUp">
