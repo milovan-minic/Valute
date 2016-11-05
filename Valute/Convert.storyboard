@@ -307,21 +307,26 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n6a-tX-BxH" userLabel="infoBlock">
                                 <rect key="frame" x="0.0" y="213" width="375" height="60"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Currency Conversion Fee (optional)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="daO-CX-0tD">
-                                        <rect key="frame" x="8" y="19" width="226" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currency Conversion Fee (optional)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="daO-CX-0tD">
+                                        <rect key="frame" x="10" y="10" width="170.5" height="40"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VKN-yJ-6tp">
-                                        <rect key="frame" x="324" y="19" width="22" height="22"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VKN-yJ-6tp">
+                                        <rect key="frame" x="323" y="15" width="22" height="30"/>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="VKN-yJ-6tp" secondAttribute="bottom" constant="15" id="3my-6a-Yt0"/>
+                                    <constraint firstItem="daO-CX-0tD" firstAttribute="centerY" secondItem="VKN-yJ-6tp" secondAttribute="centerY" id="9Kb-bo-9bG"/>
+                                    <constraint firstItem="VKN-yJ-6tp" firstAttribute="top" secondItem="n6a-tX-BxH" secondAttribute="top" constant="15" id="EYe-Py-zSK"/>
+                                    <constraint firstAttribute="bottom" secondItem="daO-CX-0tD" secondAttribute="bottom" constant="10" id="LOw-XR-aR9"/>
+                                    <constraint firstItem="daO-CX-0tD" firstAttribute="top" secondItem="n6a-tX-BxH" secondAttribute="top" constant="10" id="SaN-eR-3ji"/>
                                     <constraint firstAttribute="height" constant="60" id="d51-uP-QQY"/>
+                                    <constraint firstItem="daO-CX-0tD" firstAttribute="leading" secondItem="n6a-tX-BxH" secondAttribute="leading" constant="10" id="pKB-B4-7jH"/>
+                                    <constraint firstAttribute="trailing" secondItem="VKN-yJ-6tp" secondAttribute="trailing" constant="30" id="xba-o3-r9V"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mqm-v7-Sgf" userLabel="Penel">
