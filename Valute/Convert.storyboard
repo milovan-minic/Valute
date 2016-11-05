@@ -186,7 +186,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nIO-0A-cR4">
                                                 <rect key="frame" x="0.0" y="0.0" width="93" height="92.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="36"/>
-                                                <state key="normal" title="+="/>
+                                                <state key="normal" title="+"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="brF-9f-rIc">
                                                 <rect key="frame" x="94" y="0.0" width="93" height="92.5"/>
@@ -203,10 +203,16 @@
                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
                                                 <state key="normal" title="⌫"/>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gDE-HN-5Hn">
+                                                <rect key="frame" x="0.0" y="0.0" width="93" height="92.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="36"/>
+                                                <state key="normal" title="="/>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="nng-fw-hqH" secondAttribute="trailing" id="05P-LR-DDX"/>
+                                            <constraint firstItem="gDE-HN-5Hn" firstAttribute="top" secondItem="nIO-0A-cR4" secondAttribute="top" id="0wY-wf-PXo"/>
                                             <constraint firstItem="brF-9f-rIc" firstAttribute="width" secondItem="nIO-0A-cR4" secondAttribute="width" id="Ag7-Ks-J4z"/>
                                             <constraint firstItem="nIO-0A-cR4" firstAttribute="top" secondItem="xTx-t6-Pls" secondAttribute="top" id="Fk0-O7-2Tu"/>
                                             <constraint firstItem="nIO-0A-cR4" firstAttribute="leading" secondItem="xTx-t6-Pls" secondAttribute="leading" id="G3Z-aJ-rqd"/>
@@ -214,12 +220,15 @@
                                             <constraint firstItem="rUx-KA-vf9" firstAttribute="top" secondItem="brF-9f-rIc" secondAttribute="top" id="TRa-hM-6Nb"/>
                                             <constraint firstItem="brF-9f-rIc" firstAttribute="bottom" secondItem="nIO-0A-cR4" secondAttribute="bottom" id="Trs-od-0Ad"/>
                                             <constraint firstItem="rUx-KA-vf9" firstAttribute="leading" secondItem="brF-9f-rIc" secondAttribute="trailing" constant="1" id="VA6-mt-KsN"/>
+                                            <constraint firstItem="gDE-HN-5Hn" firstAttribute="width" secondItem="nIO-0A-cR4" secondAttribute="width" id="bhd-vE-RQc"/>
                                             <constraint firstItem="brF-9f-rIc" firstAttribute="top" secondItem="nIO-0A-cR4" secondAttribute="top" id="cqX-2v-nM6"/>
                                             <constraint firstItem="brF-9f-rIc" firstAttribute="leading" secondItem="nIO-0A-cR4" secondAttribute="trailing" constant="1" id="dKm-vg-0Py"/>
                                             <constraint firstAttribute="bottom" secondItem="nIO-0A-cR4" secondAttribute="bottom" id="di0-e3-MOO"/>
                                             <constraint firstItem="rUx-KA-vf9" firstAttribute="width" secondItem="brF-9f-rIc" secondAttribute="width" id="ds4-mT-3jA"/>
                                             <constraint firstItem="nng-fw-hqH" firstAttribute="width" secondItem="rUx-KA-vf9" secondAttribute="width" id="e9H-Tz-mcB"/>
+                                            <constraint firstItem="gDE-HN-5Hn" firstAttribute="bottom" secondItem="nIO-0A-cR4" secondAttribute="bottom" id="qB6-TT-HN6"/>
                                             <constraint firstItem="nng-fw-hqH" firstAttribute="top" secondItem="rUx-KA-vf9" secondAttribute="top" id="qoU-sa-QkJ"/>
+                                            <constraint firstItem="nIO-0A-cR4" firstAttribute="leading" secondItem="gDE-HN-5Hn" secondAttribute="leading" id="tpI-xv-55g"/>
                                             <constraint firstItem="nng-fw-hqH" firstAttribute="bottom" secondItem="rUx-KA-vf9" secondAttribute="bottom" id="udq-qs-cvs"/>
                                             <constraint firstItem="nng-fw-hqH" firstAttribute="leading" secondItem="rUx-KA-vf9" secondAttribute="trailing" constant="1" id="yyP-bD-qi3"/>
                                         </constraints>
