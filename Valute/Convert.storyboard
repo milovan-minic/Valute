@@ -333,7 +333,49 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JvL-Cx-TNc" userLabel="left">
                                         <rect key="frame" x="0.0" y="0.0" width="187" height="128"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="23,32" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QAB-Mq-XIV" userLabel="textFeld">
+                                                <rect key="frame" x="8" y="37" width="179" height="91"/>
+                                                <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="36"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F89-Qi-3O1" userLabel="flagBox">
+                                                <rect key="frame" x="8" y="0.0" width="179" height="37"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KmB-1N-DSg" userLabel="curencyCode">
+                                                        <rect key="frame" x="69" y="10" width="42" height="21"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="br" translatesAutoresizingMaskIntoConstraints="NO" id="nvG-4c-b4Q" userLabel="flagImage">
+                                                        <rect key="frame" x="0.0" y="10.5" width="16" height="16"/>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="nvG-4c-b4Q" firstAttribute="centerX" secondItem="KmB-1N-DSg" secondAttribute="centerX" id="84g-dh-UoI"/>
+                                                    <constraint firstItem="KmB-1N-DSg" firstAttribute="top" secondItem="F89-Qi-3O1" secondAttribute="topMargin" id="9Ft-K0-gd2"/>
+                                                    <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="KmB-1N-DSg" secondAttribute="trailing" id="UuS-sY-BTz"/>
+                                                    <constraint firstItem="nvG-4c-b4Q" firstAttribute="centerY" secondItem="KmB-1N-DSg" secondAttribute="centerY" id="mXh-Cf-RMi"/>
+                                                    <constraint firstItem="KmB-1N-DSg" firstAttribute="leading" secondItem="nvG-4c-b4Q" secondAttribute="trailing" constant="8" id="odN-aK-tpO"/>
+                                                    <constraint firstAttribute="bottomMargin" secondItem="KmB-1N-DSg" secondAttribute="bottom" id="tPl-yg-D3K"/>
+                                                    <constraint firstItem="nvG-4c-b4Q" firstAttribute="leading" secondItem="F89-Qi-3O1" secondAttribute="leading" id="vUO-SD-O56"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="QAB-Mq-XIV" firstAttribute="leading" secondItem="JvL-Cx-TNc" secondAttribute="leading" constant="8" id="1dz-PG-6Ub"/>
+                                            <constraint firstItem="QAB-Mq-XIV" firstAttribute="leading" secondItem="F89-Qi-3O1" secondAttribute="leading" id="8uH-Ak-vpv"/>
+                                            <constraint firstItem="QAB-Mq-XIV" firstAttribute="trailing" secondItem="F89-Qi-3O1" secondAttribute="trailing" id="Nxq-RF-f0m"/>
+                                            <constraint firstAttribute="bottom" secondItem="QAB-Mq-XIV" secondAttribute="bottom" id="QiG-MK-7dF"/>
+                                            <constraint firstAttribute="trailing" secondItem="QAB-Mq-XIV" secondAttribute="trailing" id="TBQ-T2-Ii9"/>
+                                            <constraint firstItem="F89-Qi-3O1" firstAttribute="top" secondItem="JvL-Cx-TNc" secondAttribute="top" id="a5r-AD-4vh"/>
+                                            <constraint firstItem="QAB-Mq-XIV" firstAttribute="top" secondItem="F89-Qi-3O1" secondAttribute="bottom" id="cA5-Z5-4wA"/>
+                                        </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="liE-L7-WWC" userLabel="right">
                                         <rect key="frame" x="188" y="0.0" width="187" height="128"/>
@@ -403,6 +445,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="br" width="16" height="16"/>
         <image name="valute-globalbg" width="130" height="222"/>
     </resources>
 </document>
