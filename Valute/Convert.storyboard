@@ -334,7 +334,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JvL-Cx-TNc" userLabel="left">
                                         <rect key="frame" x="0.0" y="0.0" width="187" height="80"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="23,32" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QAB-Mq-XIV" userLabel="leftTextFeld">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0,00" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QAB-Mq-XIV" userLabel="leftTextFeld">
                                                 <rect key="frame" x="8" y="36" width="179" height="44"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -386,7 +386,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="liE-L7-WWC" userLabel="right">
                                         <rect key="frame" x="188" y="0.0" width="187" height="80"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="23,32" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ub9-Of-vyQ" userLabel="rightTextField">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0,00" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ub9-Of-vyQ" userLabel="rightTextField">
                                                 <rect key="frame" x="0.0" y="37" width="179" height="43"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
