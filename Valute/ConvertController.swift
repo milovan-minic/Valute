@@ -18,6 +18,7 @@ class ConvertController: UIViewController {
     // Outlets//
     
     
+    
     @IBOutlet weak var decimalButton: UIButton!
     @IBAction func decimalButtonTapped(_ sender: UIButton) {
     }
@@ -39,28 +40,64 @@ class ConvertController: UIViewController {
     
     ////////////////////////////
     
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
+
+
+typealias UISetup = ConvertController
+extension UISetup {
+    func assignButtonTargets() {
+        let allButtons = digitButtons + operatorButtons + [decimalButton, deleteButton]
+        
+        for btn in allButtons {
+            btn.addTarget(self, action: #selector(ConvertController.didTouchButton(_:)), for: .touchDown)
+            
+            btn.addTarget(self, action: #selector(ConvertController.didUntouchButton(_:)), for: .touchCancel)
+            btn.addTarget(self, action: #selector(ConvertController.didUntouchButton(_:)), for: .touchUpOutside)
+        }
+    }
+    
+    
+    
+    
+    func didTouchButton(_ sender: UIButton){
+        
+    }
+    
+    func didUntouchButton(_ sender: UIButton) {
+        
+    }
+    
+    func configureDecimalButton() {
+        let locale = NSLocale.current
+        guard let decimalSign = locale.decimalSeparator else { return }
+        decimalButton.setTitle(decimalSign, for: .normal)
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

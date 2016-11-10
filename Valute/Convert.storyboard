@@ -262,7 +262,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="decimalButtonTapped:" destination="bDH-Ez-miI" eventType="touchUpInside" id="lgG-UH-10I"/>
+                                                    <action selector="decimalButtonTapped:" destination="bDH-Ez-miI" eventType="touchUpInside" id="bLM-a8-F4I"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rUx-KA-vf9">
@@ -526,6 +526,7 @@
                         <barButtonItem key="leftBarButtonItem" title="About &amp; Help" id="tFI-lD-Bmk"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="decimalButton" destination="brF-9f-rIc" id="NFl-z6-weW"/>
                         <outlet property="deleteButton" destination="nng-fw-hqH" id="Qf1-QE-n7h"/>
                         <outlet property="equalsButton" destination="gDE-HN-5Hn" id="jjp-iA-eDD"/>
                         <outletCollection property="digitButtons" destination="Bl2-Aa-sJI" collectionClass="NSMutableArray" id="yr6-FR-4Cg"/>
