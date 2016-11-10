@@ -32,9 +32,15 @@ class ConvertController: UIViewController {
     
     
     @IBOutlet var digitButtons: [UIButton]!
+    func digitButtonTapped(_ sender: UIButton) {
+        
+    }
     
     
     @IBOutlet var operatorButtons: [UIButton]!
+    func operationButtonTapped(_ sender: UIButton) {
+        
+    }
     
     
     
@@ -45,10 +51,21 @@ class ConvertController: UIViewController {
 
 typealias UISetup = ConvertController
 extension UISetup {
+    
+    func assignButtonTaps() {
+        for btn in digitButtons {
+            btn.addTarget(self, action: #selector(ConvertController.digitButtonTapped(_:)), for: .touchUpInside)
+        }
+        for btn in operatorButtons {
+            btn.addTarget(self, action: #selector(ConvertController.operationButtonTapped(_:)), for: .touchUpInside)
+        }
+    }
+    
     func assignButtonTargets() {
         let allButtons = digitButtons + operatorButtons + [decimalButton, deleteButton]
         
         for btn in allButtons {
+//            btn.addTarget(self, action: #selector(ConvertController.didTouchButton(_:)), for: .touchDown)
             btn.addTarget(self, action: #selector(ConvertController.didTouchButton(_:)), for: .touchDown)
             
             btn.addTarget(self, action: #selector(ConvertController.didUntouchButton(_:)), for: .touchCancel)
@@ -74,6 +91,7 @@ extension UISetup {
     }
     
 }
+
 
 
 
