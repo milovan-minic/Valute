@@ -90,11 +90,25 @@ extension UISetup {
         decimalButton.setTitle(decimalSign, for: .normal)
     }
     
+    func cleanupUI() {
+        
+    }
+    
 }
 
 
 
-
+typealias ViewLifecycle = ConvertController
+extension ViewLifecycle {
+    override func viewDidLoad() {
+        self.title = self.navigationItem.title?.uppercased()
+        
+        assignButtonTargets()
+        assignButtonTaps()
+        configureDecimalButton()
+        cleanupUI()
+    }
+}
 
 
 
