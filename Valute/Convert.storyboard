@@ -27,6 +27,34 @@
             </objects>
             <point key="canvasLocation" x="-444" y="155"/>
         </scene>
+        <!--Currency Picker Controller-->
+        <scene sceneID="S2j-Rf-SEL">
+            <objects>
+                <tableViewController id="ktf-Qu-GME" customClass="CurrencyPickerController" customModule="ConvertController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="8oL-mQ-k61">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="TtT-Lh-zJf">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TtT-Lh-zJf" id="YNI-FG-DgA">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ktf-Qu-GME" id="BRY-wj-nFS"/>
+                            <outlet property="delegate" destination="ktf-Qu-GME" id="7Yi-ya-xYU"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rkr-zd-XTx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="361" y="-636"/>
+        </scene>
         <!--Currency Converter-->
         <scene sceneID="ubl-7a-bpL">
             <objects>
