@@ -261,6 +261,9 @@
                                                 <state key="normal" title=",">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="decimalButtonTapped:" destination="bDH-Ez-miI" eventType="touchUpInside" id="lgG-UH-10I"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rUx-KA-vf9">
                                                 <rect key="frame" x="188" y="0.0" width="93" height="93"/>
@@ -277,6 +280,9 @@
                                                 <state key="normal" title="⌫">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="deleteButtonTapped:" destination="bDH-Ez-miI" eventType="touchUpInside" id="Gmv-Ws-oAa"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gDE-HN-5Hn">
                                                 <rect key="frame" x="0.0" y="0.0" width="93" height="93"/>
@@ -519,6 +525,24 @@
                     <navigationItem key="navigationItem" title="Currency Converter" id="C9o-21-lJp">
                         <barButtonItem key="leftBarButtonItem" title="About &amp; Help" id="tFI-lD-Bmk"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="deleteButton" destination="nng-fw-hqH" id="Qf1-QE-n7h"/>
+                        <outlet property="equalsButton" destination="gDE-HN-5Hn" id="jjp-iA-eDD"/>
+                        <outletCollection property="digitButtons" destination="Bl2-Aa-sJI" collectionClass="NSMutableArray" id="yr6-FR-4Cg"/>
+                        <outletCollection property="digitButtons" destination="9B1-Cq-IhN" collectionClass="NSMutableArray" id="1xf-Nj-j9z"/>
+                        <outletCollection property="digitButtons" destination="g3i-iL-L3z" collectionClass="NSMutableArray" id="swl-4X-hl0"/>
+                        <outletCollection property="digitButtons" destination="MJH-lb-FpR" collectionClass="NSMutableArray" id="2bP-Qs-12e"/>
+                        <outletCollection property="digitButtons" destination="ljY-ID-zV0" collectionClass="NSMutableArray" id="a9J-C6-uqi"/>
+                        <outletCollection property="digitButtons" destination="ZQq-Dx-aa7" collectionClass="NSMutableArray" id="GqW-c8-iLy"/>
+                        <outletCollection property="digitButtons" destination="BdT-Kx-afC" collectionClass="NSMutableArray" id="7TZ-28-fhI"/>
+                        <outletCollection property="digitButtons" destination="Mae-XV-4GP" collectionClass="NSMutableArray" id="jFV-j4-9iM"/>
+                        <outletCollection property="digitButtons" destination="bJD-0q-FAX" collectionClass="NSMutableArray" id="3RZ-F0-tbv"/>
+                        <outletCollection property="digitButtons" destination="rUx-KA-vf9" collectionClass="NSMutableArray" id="Hgs-yr-p3Z"/>
+                        <outletCollection property="operatorButtons" destination="kBW-EW-Heq" collectionClass="NSMutableArray" id="ajx-LH-aD5"/>
+                        <outletCollection property="operatorButtons" destination="HUd-pa-DlC" collectionClass="NSMutableArray" id="AZw-qM-PYA"/>
+                        <outletCollection property="operatorButtons" destination="rBT-Ng-yAj" collectionClass="NSMutableArray" id="Y2K-rt-kG1"/>
+                        <outletCollection property="operatorButtons" destination="nIO-0A-cR4" collectionClass="NSMutableArray" id="Vt2-DE-Dyg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aXQ-Ty-4Qy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

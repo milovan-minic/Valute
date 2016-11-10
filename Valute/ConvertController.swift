@@ -9,7 +9,38 @@
 import UIKit
 
 class ConvertController: UIViewController {
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 
+    ////////////////////////////
+    // Outlets//
+    
+    
+    @IBOutlet weak var decimalButton: UIButton!
+    @IBAction func decimalButtonTapped(_ sender: UIButton) {
+    }
+    
+    
+    @IBOutlet weak var deleteButton: UIButton!
+    @IBAction func deleteButtonTapped(_ sender: UIButton) {
+    }
+    
+    @IBOutlet weak var equalsButton: UIButton!
+    
+    
+    @IBOutlet var digitButtons: [UIButton]!
+    
+    
+    @IBOutlet var operatorButtons: [UIButton]!
+    
+    
+    
+    ////////////////////////////
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
