@@ -10,12 +10,17 @@ import UIKit
 
 class ConvertController: UIViewController {
     
+    var dataSource: [String] = {
+        return Locale.commonISOCurrencyCodes
+    }()
+    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
 
     ////////////////////////////
-    // Outlets//
+    // Outlets and Actions //
+    // TODO: Potrazi Paw app za analizu api poziva
     
     
     
@@ -28,7 +33,9 @@ class ConvertController: UIViewController {
     @IBAction func deleteButtonTapped(_ sender: UIButton) {
     }
     
+    // = Button
     @IBOutlet weak var equalsButton: UIButton!
+    // TODO: Add Action
     
     
     @IBOutlet var digitButtons: [UIButton]!
@@ -41,6 +48,22 @@ class ConvertController: UIViewController {
     func operationButtonTapped(_ sender: UIButton) {
         
     }
+    
+    // Definicija tipa
+    // vrednost "none" znaci da ni jedna operacija trenutno nije aktivna
+    enum ArithmeticOperation {
+        case none
+        case add, subtract, divide, multiply
+        case equals
+    }
+    
+    // 
+    var exqalOperation = ArithmeticOperation.none
+    
+    //	promenljive za čuvanje unetih brojeva
+    //	izabrao sam da budu decimalni brojevi, uvek
+    var firstOperand = 0.0
+    var secondOperand = 0.0
     
     
     
