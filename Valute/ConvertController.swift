@@ -17,6 +17,12 @@ class ConvertController: UIViewController {
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
+    
+    let formatter : NumberFormatter = {
+        let nf = NumberFormatter()
+        nf.numberStyle = .decimal
+        return nf
+    }()
 
     ////////////////////////////
     // Outlets and Actions //
