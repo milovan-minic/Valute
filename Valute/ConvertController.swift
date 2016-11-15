@@ -26,12 +26,32 @@ class ConvertController: UIViewController {
     
     @IBOutlet weak var decimalButton: UIButton!
     @IBAction func decimalButtonTapped(_ sender: UIButton) {
+    
+//    guard let numString = sender.title(for: .normal) else { return }
+//    var value = resultField.text ?? ""
+//    defer {
+//        self.didUntouchButton(sender)
+//    }
+    
+//    if value.contains(numString) {
+//        return
+//    }
+    
+//    value += numString
+//    resultField.text = value
     }
     
     
     @IBOutlet weak var deleteButton: UIButton!
     @IBAction func deleteButtonTapped(_ sender: UIButton) {
+//        var value = resultField.text ?? ""
+//        guard value.characters.count > 0 else { return }
+//        var chars = value.characters
+//        chars.removeLast()
+//        resultField.text = String(chars)
     }
+    
+    
     
     // = Button
     @IBOutlet weak var equalsButton: UIButton!
@@ -39,15 +59,15 @@ class ConvertController: UIViewController {
     
     
     @IBOutlet var digitButtons: [UIButton]!
-    func digitButtonTapped(_ sender: UIButton) {
-        
-    }
+//    func digitButtonTapped(_ sender: UIButton) {
+//        
+//    }
     
     
     @IBOutlet var operatorButtons: [UIButton]!
-    func operationButtonTapped(_ sender: UIButton) {
-        
-    }
+//    func operationButtonTapped(_ sender: UIButton) {
+//        
+//    }
     
     // Definicija tipa
     // vrednost "none" znaci da ni jedna operacija trenutno nije aktivna
@@ -58,7 +78,7 @@ class ConvertController: UIViewController {
     }
     
     // 
-    var exqalOperation = ArithmeticOperation.none
+    var activeOperation = ArithmeticOperation.none
     
     //	promenljive za čuvanje unetih brojeva
     //	izabrao sam da budu decimalni brojevi, uvek
@@ -132,6 +152,121 @@ extension ViewLifecycle {
         cleanupUI()
     }
 }
+
+
+typealias Internal = ConvertController
+extension Internal {
+    
+    func validateOperandInput() -> Double? {
+//    guard let numString = resultFieldText else {
+//        return nil
+//    }
+//    
+//    let num formater.number(from: numString)?.doubleValue
+//    return num
+    return 0
+}
+
+
+    func digitButtonTapped(_ sender: UIButton) {
+        guard let numString = sender.title(for: .normal) else { return }
+        
+        var value = resultField.text ?? ""
+        
+        defer {
+            self.didUntouchButton(sender)
+        }
+        
+        value += numString
+        
+        resultField.text = value
+    }
+    
+    func operationButtonTapped(_ sender: UIButton) {
+        var isEquals = false
+        
+        // uhvatiti sta pise na dugmetu
+        guard let caption = sender.title(for: .normal) else {
+            fatalError("Received operator button tap from from button with no caption on it!")
+        }
+        
+        // pa podsiti vrednosti prema tome
+        switch caption {
+            case "+":
+                activeOperation = .add
+            case "-":
+                activeOperation = .subtract
+            case "×":
+                activeOperation = .multiply
+            case "÷":
+                activeOperation = .divide
+            case "=":
+                isEquals = true
+            default:
+                activeOperation = .none
+        }
+        
+        if (isEquals) {
+            // pritisnut je taster =
+            // to znaci da je unesen i drugi operand
+            guard let num = validateOperandInput() else {
+                resultField.text = nil
+                return
+            }
+            
+            secondOperand = num
+            
+            // sada izracunaj operaciju
+            var rez = firstOperand
+            
+            switch activeOperation {
+            case .add:
+                rez += secondOperand
+            case .subtract:
+                rez -= secondOperand
+            case .multiply:
+                rez *= secondOperand
+            case .divide:
+                rez /= secondOperand
+            default:
+                break
+            }
+            
+            // i ispisi rezultate u tekst fildu
+            resultField.text = formatter.string(for: rez)
+            
+            // clean out placeholders
+            firstOperand = 0
+            secondOperand = 0
+        } else if activeOperation != .none {
+            //	pritisnut je neki od aritm. operatora
+            //	to znači da je unet prvi operand
+            guard let num = validateOperandInput() else {
+                resultField.text = nil
+                return
+            }
+            firstOperand = num
+            //	obriši prikaz i time se spremi za unos drugog operanda
+            resultField.text = nil
+        }
+        self.didUntouchButton(sender)
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
