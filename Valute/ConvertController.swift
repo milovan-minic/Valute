@@ -189,73 +189,73 @@ extension Internal {
     }
     
     func operationButtonTapped(_ sender: UIButton) {
-        var isEquals = false
-        
-        // uhvatiti sta pise na dugmetu
-        guard let caption = sender.title(for: .normal) else {
-            fatalError("Received operator button tap from from button with no caption on it!")
-        }
-        
-        // pa podsiti vrednosti prema tome
-        switch caption {
-            case "+":
-                activeOperation = .add
-            case "-":
-                activeOperation = .subtract
-            case "×":
-                activeOperation = .multiply
-            case "÷":
-                activeOperation = .divide
-            case "=":
-                isEquals = true
-            default:
-                activeOperation = .none
-        }
-        
-        if (isEquals) {
-            // pritisnut je taster =
-            // to znaci da je unesen i drugi operand
-            guard let num = validateOperandInput() else {
-                resultField.text = nil
-                return
-            }
-            
-            secondOperand = num
-            
-            // sada izracunaj operaciju
-            var rez = firstOperand
-            
-            switch activeOperation {
-            case .add:
-                rez += secondOperand
-            case .subtract:
-                rez -= secondOperand
-            case .multiply:
-                rez *= secondOperand
-            case .divide:
-                rez /= secondOperand
-            default:
-                break
-            }
-            
-            // i ispisi rezultate u tekst fildu
-            resultField.text = formatter.string(for: rez)
-            
-            // clean out placeholders
-            firstOperand = 0
-            secondOperand = 0
-        } else if activeOperation != .none {
-            //	pritisnut je neki od aritm. operatora
-            //	to znači da je unet prvi operand
-            guard let num = validateOperandInput() else {
-                resultField.text = nil
-                return
-            }
-            firstOperand = num
-            //	obriši prikaz i time se spremi za unos drugog operanda
-            resultField.text = nil
-        }
-        self.didUntouchButton(sender)
+//        var isEquals = false
+//        
+//        // uhvatiti sta pise na dugmetu
+//        guard let caption = sender.title(for: .normal) else {
+//            fatalError("Received operator button tap from from button with no caption on it!")
+//        }
+//        
+//        // pa podsiti vrednosti prema tome
+//        switch caption {
+//            case "+":
+//                activeOperation = .add
+//            case "-":
+//                activeOperation = .subtract
+//            case "×":
+//                activeOperation = .multiply
+//            case "÷":
+//                activeOperation = .divide
+//            case "=":
+//                isEquals = true
+//            default:
+//                activeOperation = .none
+//        }
+//        
+//        if (isEquals) {
+//            // pritisnut je taster =
+//            // to znaci da je unesen i drugi operand
+//            guard let num = validateOperandInput() else {
+//                resultField.text = nil
+//                return
+//            }
+//            
+//            secondOperand = num
+//            
+//            // sada izracunaj operaciju
+//            var rez = firstOperand
+//            
+//            switch activeOperation {
+//            case .add:
+//                rez += secondOperand
+//            case .subtract:
+//                rez -= secondOperand
+//            case .multiply:
+//                rez *= secondOperand
+//            case .divide:
+//                rez /= secondOperand
+//            default:
+//                break
+//            }
+//            
+//            // i ispisi rezultate u tekst fildu
+//            resultField.text = formatter.string(for: rez)
+//            
+//            // clean out placeholders
+//            firstOperand = 0
+//            secondOperand = 0
+//        } else if activeOperation != .none {
+//            //	pritisnut je neki od aritm. operatora
+//            //	to znači da je unet prvi operand
+//            guard let num = validateOperandInput() else {
+//                resultField.text = nil
+//                return
+//            }
+//            firstOperand = num
+//            //	obriši prikaz i time se spremi za unos drugog operanda
+//            resultField.text = nil
+//        }
+//        self.didUntouchButton(sender)
         
     }
 }
