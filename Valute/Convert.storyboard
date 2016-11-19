@@ -542,6 +542,8 @@
                         <outlet property="decimalButton" destination="brF-9f-rIc" id="NFl-z6-weW"/>
                         <outlet property="deleteButton" destination="nng-fw-hqH" id="Qf1-QE-n7h"/>
                         <outlet property="equalsButton" destination="gDE-HN-5Hn" id="jjp-iA-eDD"/>
+                        <outlet property="leadingCurrencyBox" destination="JvL-Cx-TNc" id="q4A-1X-Pky"/>
+                        <outlet property="trailingCurrencyBox" destination="liE-L7-WWC" id="X7M-xJ-F5l"/>
                         <outletCollection property="digitButtons" destination="Bl2-Aa-sJI" collectionClass="NSMutableArray" id="yr6-FR-4Cg"/>
                         <outletCollection property="digitButtons" destination="9B1-Cq-IhN" collectionClass="NSMutableArray" id="1xf-Nj-j9z"/>
                         <outletCollection property="digitButtons" destination="g3i-iL-L3z" collectionClass="NSMutableArray" id="swl-4X-hl0"/>

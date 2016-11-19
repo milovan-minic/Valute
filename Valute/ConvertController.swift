@@ -91,10 +91,11 @@ class ConvertController: UIViewController {
     var firstOperand = 0.0
     var secondOperand = 0.0
     
+    // sakrijem znak =, a prikazem operator
     
-    
+    @IBOutlet weak var leadingCurrencyBox: CurrencyBox!
+    @IBOutlet weak var trailingCurrencyBox: CurrencyBox!
     ////////////////////////////
-    
 }
 
 
