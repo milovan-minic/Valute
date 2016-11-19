@@ -365,7 +365,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mqm-v7-Sgf" userLabel="Penel">
                                 <rect key="frame" x="0.0" y="116" width="375" height="80"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JvL-Cx-TNc" userLabel="left">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JvL-Cx-TNc" userLabel="left" customClass="CurrencyBox" customModule="Valute" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="187" height="80"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0,00" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QAB-Mq-XIV" userLabel="leftTextFeld">
@@ -374,6 +374,9 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="36"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="JvL-Cx-TNc" id="D5I-Eb-hHW"/>
+                                                </connections>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F89-Qi-3O1" userLabel="leftFlagBox">
                                                 <rect key="frame" x="8" y="0.0" width="179" height="36"/>
@@ -416,8 +419,13 @@
                                             <constraint firstItem="F89-Qi-3O1" firstAttribute="top" secondItem="JvL-Cx-TNc" secondAttribute="top" id="a5r-AD-4vh"/>
                                             <constraint firstItem="QAB-Mq-XIV" firstAttribute="top" secondItem="F89-Qi-3O1" secondAttribute="bottom" id="cA5-Z5-4wA"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="currencyCodeLabel" destination="KmB-1N-DSg" id="6Qf-ai-ECg"/>
+                                            <outlet property="flagImageView" destination="nvG-4c-b4Q" id="nSr-ey-MI2"/>
+                                            <outlet property="textField" destination="QAB-Mq-XIV" id="ydU-gC-9wb"/>
+                                        </connections>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="liE-L7-WWC" userLabel="right">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="liE-L7-WWC" userLabel="right" customClass="CurrencyBox" customModule="Valute" customModuleProvider="target">
                                         <rect key="frame" x="188" y="0.0" width="187" height="80"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0,00" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ub9-Of-vyQ" userLabel="rightTextField">
@@ -468,6 +476,11 @@
                                             <constraint firstItem="w7R-f1-GAG" firstAttribute="top" secondItem="liE-L7-WWC" secondAttribute="top" id="owU-KS-y9L"/>
                                             <constraint firstAttribute="bottom" secondItem="ub9-Of-vyQ" secondAttribute="bottom" id="ph8-Yg-G1Z"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="currencyCodeLabel" destination="Enb-ET-soL" id="1qQ-Bp-B5Z"/>
+                                            <outlet property="flagImageView" destination="pSa-mj-a4f" id="46a-UK-rbx"/>
+                                            <outlet property="textField" destination="ub9-Of-vyQ" id="KwA-gr-Hap"/>
+                                        </connections>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
