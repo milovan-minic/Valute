@@ -106,6 +106,12 @@ class ConvertController: UIViewController {
     var targgetCurrencyBox: CurrencyBox {
         return trailingCurrencyBox
     }
+    
+    // data model za konverter
+    var sourceCurrencyCode: String!
+    var targetCurrencyCode: String!
+    var currencyRate: Double?
+    
     ////////////////////////////
 }
 
@@ -151,6 +157,13 @@ extension UISetup {
         decimalButton.setTitle(decimalSign, for: .normal)
     }
     
+    
+    
+    /// Sets currencies for startup
+    func setupInitailCurrencies() {
+        
+    }
+    
     func cleanupUI() {
         
         // sakrivanje znaka =, a prikazivanje operatora
@@ -179,6 +192,7 @@ extension ViewLifecycle {
         assignButtonTaps()
         configureDecimalButton()
         cleanupUI()
+        setupInitailCurrencies()
     }
 }
 
