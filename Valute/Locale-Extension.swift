@@ -14,6 +14,20 @@ extension Locale {
     
     static func countryCode(forCurrencyCode currencyCode: String) -> String? {
         
+        // dodavanje izuzetaka za zemlje koje koriste valute EUR, USD itd.
+        switch currencyCode.uppercased() {
+        case "EUR":
+            return "eu"
+        case "USD":
+            return "us"
+        case "GBP":
+            return "gb"
+        case "AUD":
+            return "au"
+        default:
+            break
+        }
+        
         for countryCode in NSLocale.isoCountryCodes {
         
             //	we need to build LocaleIdentifier, which can have many components
