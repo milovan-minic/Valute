@@ -161,6 +161,9 @@ extension UISetup {
     
     /// Sets currencies for startup
     func setupInitailCurrencies() {
+        // privremeno dodate valute koje ce se koristiti za funkcionisanje konvertera
+        self.sourceCurrencyCode = "BRL"
+        self.targetCurrencyCode = "AED"
         
     }
     
