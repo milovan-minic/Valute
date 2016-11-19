@@ -149,6 +149,10 @@ extension UISetup {
             (btn) in  btn.alpha = 1
         }
         
+        // obrisati sadrzaj tekst filda pre pocetka rada aplikacije
+        self.leadingCurrencyBox.textField.text = nil
+        self.trailingCurrencyBox.textField.text = nil
+        
     }
     
 }
