@@ -75,7 +75,9 @@ class ConvertController: UIViewController {
 //        
 //    }
     
-    // Definicija tipa
+    // CALCULATIONS
+    
+    // Definicija tipa: vrsta aritmeticke operacije
     // vrednost "none" znaci da ni jedna operacija trenutno nije aktivna
     enum ArithmeticOperation {
         case none
@@ -90,6 +92,8 @@ class ConvertController: UIViewController {
     //	izabrao sam da budu decimalni brojevi, uvek
     var firstOperand = 0.0
     var secondOperand = 0.0
+    
+    // CURRENCIES
     
     // sakrijem znak =, a prikazem operator
     
@@ -119,6 +123,10 @@ class ConvertController: UIViewController {
         }
     }
     var currencyRate: Double?
+    
+    // TOUCHES
+    
+    var buttonOriginalColor: UIColor?
     
     ////////////////////////////
 }
