@@ -95,6 +95,17 @@ class ConvertController: UIViewController {
     
     @IBOutlet weak var leadingCurrencyBox: CurrencyBox!
     @IBOutlet weak var trailingCurrencyBox: CurrencyBox!
+    
+    
+    // dodavanje leadingCurrencyBox-a kao source
+    var sourceCurrencyBox: CurrencyBox {
+        return leadingCurrencyBox
+    }
+    
+    // dodavanje trailingCurrencyBox-a kao target
+    var targgetCurrencyBox: CurrencyBox {
+        return trailingCurrencyBox
+    }
     ////////////////////////////
 }
 
@@ -189,15 +200,15 @@ extension Internal {
     func digitButtonTapped(_ sender: UIButton) {
         guard let numString = sender.title(for: .normal) else { return }
         
-        var value = resultField.text ?? ""
+//        var value = resultField.text ?? ""
         
         defer {
             self.didUntouchButton(sender)
         }
         
-        value += numString
+//        value += numString
         
-        resultField.text = value
+//        resultField.text = value
     }
     
     func operationButtonTapped(_ sender: UIButton) {
