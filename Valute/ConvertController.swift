@@ -141,6 +141,13 @@ extension UISetup {
     
     func cleanupUI() {
         
+        // sakrivanje znaka =, a prikazivanje operatora
+        self.equalsButton.alpha = 0
+        // dodavanje alpha kanala za svu ostalu dugmad na maksimum
+        self.operatorButtons.forEach {
+            (btn) in  btn.alpha = 1
+        }
+        
     }
     
 }
