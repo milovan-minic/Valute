@@ -27,6 +27,12 @@ class CurrencyBox: UIView {
         currencyCodeLabel.text = currencyCode
         
         // update flag image, using Locale framework
+        guard let countryCode = Locale.countryCode(forCurrencyCode: currencyCode) else {
+            flagImageView.image = nil
+            return
+        }
+        
+        flagImageView.image = UIImage(named: countryCode.lowercased())
     }
 
 }
