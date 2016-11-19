@@ -108,8 +108,16 @@ class ConvertController: UIViewController {
     }
     
     // data model za konverter
-    var sourceCurrencyCode: String!
-    var targetCurrencyCode: String!
+    var sourceCurrencyCode: String! {
+        didSet {
+            sourceCurrencyBox.configure(withCurrencyCode: sourceCurrencyCode)
+        }
+    }
+    var targetCurrencyCode: String! {
+        didSet {
+            targgetCurrencyBox.configure(withCurrencyCode: targetCurrencyCode)
+        }
+    }
     var currencyRate: Double?
     
     ////////////////////////////
