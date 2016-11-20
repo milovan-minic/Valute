@@ -125,11 +125,13 @@ class ConvertController: UIViewController {
     var sourceCurrencyCode: String! {
         didSet {
             sourceCurrencyBox.configure(withCurrencyCode: sourceCurrencyCode)
+            UserDefaults.sourceCurrencyCode = sourceCurrencyCode
         }
     }
     var targetCurrencyCode: String! {
         didSet {
             targgetCurrencyBox.configure(withCurrencyCode: targetCurrencyCode)
+            UserDefaults.targetCurrencyCode = targetCurrencyCode
         }
     }
     var currencyRate: Double?
@@ -222,8 +224,8 @@ extension UISetup {
     /// Sets currencies for startup
     func setupInitailCurrencies() {
         // privremeno dodate valute koje ce se koristiti za funkcionisanje konvertera
-        self.sourceCurrencyCode = "BRL"
-        self.targetCurrencyCode = "AED"
+        self.sourceCurrencyCode = UserDefaults.sourceCurrencyCode ?? "USD"
+        self.targetCurrencyCode = UserDefaults.targetCurrencyCode ?? "EUR"
         
     }
     
