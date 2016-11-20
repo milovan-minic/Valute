@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol CurrencyBoxDelegate: class {
+    func currencyBoxInitiatedChange(_ currencyBox: CurrencyBox)
+}
+
 class CurrencyBox: UIView {
 
     /*
@@ -21,6 +25,8 @@ class CurrencyBox: UIView {
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var flagImageView: UIImageView!
     @IBOutlet weak var currencyCodeLabel: UILabel!
+    
+    weak var delegate: CurrencyBoxDelegate?
     
     //	using computed property for both get/set
     var ammountText: String? {
@@ -44,6 +50,10 @@ class CurrencyBox: UIView {
         }
         
         flagImageView.image = UIImage(named: countryCode.lowercased())
+    }
+    
+    @IBAction func didTapButton(_ sender: UIButton) {
+        delegate?.currencyBoxInitiatedChange(self)
     }
 
 }

@@ -417,6 +417,9 @@
                                                     </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Xx-1w-jG8">
                                                         <rect key="frame" x="0.0" y="0.0" width="179" height="36.5"/>
+                                                        <connections>
+                                                            <action selector="didTapButton:" destination="JvL-Cx-TNc" eventType="touchUpInside" id="Xlq-We-cWg"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -474,6 +477,9 @@
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Db-ap-DHh">
                                                         <rect key="frame" x="0.0" y="0.0" width="179" height="36.5"/>
+                                                        <connections>
+                                                            <action selector="didTapButton:" destination="liE-L7-WWC" eventType="touchUpInside" id="P3a-FB-ozU"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
