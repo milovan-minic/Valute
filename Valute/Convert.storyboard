@@ -42,7 +42,32 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TtT-Lh-zJf" id="YNI-FG-DgA">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rs" translatesAutoresizingMaskIntoConstraints="NO" id="ntC-B8-lve">
+                                            <rect key="frame" x="16" y="13.5" width="16" height="16"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="RSD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JFO-73-Bxb">
+                                            <rect key="frame" x="40" y="8" width="327" height="27.5"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="JFO-73-Bxb" firstAttribute="leading" secondItem="ntC-B8-lve" secondAttribute="trailing" constant="8" id="CDP-0Y-36u"/>
+                                        <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="ntC-B8-lve" secondAttribute="bottom" id="FNN-jR-3yX"/>
+                                        <constraint firstItem="JFO-73-Bxb" firstAttribute="top" secondItem="YNI-FG-DgA" secondAttribute="topMargin" id="IlP-Ij-HDl"/>
+                                        <constraint firstItem="ntC-B8-lve" firstAttribute="centerY" secondItem="JFO-73-Bxb" secondAttribute="centerY" id="RYn-Wk-akh"/>
+                                        <constraint firstItem="ntC-B8-lve" firstAttribute="leading" secondItem="YNI-FG-DgA" secondAttribute="leadingMargin" constant="8" id="SCk-Zt-Gd8"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="JFO-73-Bxb" secondAttribute="trailing" id="cXb-2Q-MgL"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="JFO-73-Bxb" secondAttribute="bottom" id="jZ7-Il-zVZ"/>
+                                        <constraint firstItem="ntC-B8-lve" firstAttribute="top" relation="greaterThanOrEqual" secondItem="YNI-FG-DgA" secondAttribute="topMargin" id="usg-Ou-jpd"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="currencyLabel" destination="JFO-73-Bxb" id="hfw-9r-ecT"/>
+                                    <outlet property="iconView" destination="ntC-B8-lve" id="IJG-5F-7QQ"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -53,7 +78,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rkr-zd-XTx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="361" y="900"/>
+            <point key="canvasLocation" x="360.80000000000001" y="899.10044977511257"/>
         </scene>
         <!--Currency Converter-->
         <scene sceneID="ubl-7a-bpL">
@@ -568,6 +593,7 @@
     <resources>
         <image name="ae" width="16" height="16"/>
         <image name="br" width="16" height="16"/>
+        <image name="rs" width="16" height="16"/>
         <image name="valute-globalbg" width="130" height="222"/>
     </resources>
 </document>

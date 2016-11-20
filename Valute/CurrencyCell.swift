@@ -10,6 +10,9 @@ import UIKit
 
 class CurrencyCell: UITableViewCell {
 
+    @IBOutlet weak var iconView: UIImageView!
+    @IBOutlet weak var currencyLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
