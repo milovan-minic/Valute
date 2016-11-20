@@ -32,12 +32,13 @@ class ConvertController: UIViewController {
     
     @IBOutlet weak var decimalButton: UIButton!
     @IBAction func decimalButtonTapped(_ sender: UIButton) {
+        
+        defer {
+            self.didUntouchButton(sender)
+        }
     
 //    guard let numString = sender.title(for: .normal) else { return }
 //    var value = resultField.text ?? ""
-//    defer {
-//        self.didUntouchButton(sender)
-//    }
     
 //    if value.contains(numString) {
 //        return
@@ -50,6 +51,11 @@ class ConvertController: UIViewController {
     
     @IBOutlet weak var deleteButton: UIButton!
     @IBAction func deleteButtonTapped(_ sender: UIButton) {
+        
+        defer {
+            self.didUntouchButton(sender)
+        }
+        
 //        var value = resultField.text ?? ""
 //        guard value.characters.count > 0 else { return }
 //        var chars = value.characters
@@ -67,13 +73,21 @@ class ConvertController: UIViewController {
     @IBOutlet var digitButtons: [UIButton]!
 //    func digitButtonTapped(_ sender: UIButton) {
 //        
+//        defer {
+//            self.didUntouchButton(sender)
+//        }
+//        
 //    }
     
     
     @IBOutlet var operatorButtons: [UIButton]!
-//    func operationButtonTapped(_ sender: UIButton) {
-//        
-//    }
+    func operationButtonTapped(_ sender: UIButton) {
+        
+        defer {
+            self.didUntouchButton(sender)
+        }
+        
+    }
     
     // CALCULATIONS
     
@@ -263,7 +277,7 @@ extension Internal {
 
 
     func digitButtonTapped(_ sender: UIButton) {
-        guard let numString = sender.title(for: .normal) else { return }
+//        guard let numString = sender.title(for: .normal) else { return }
         
 //        var value = resultField.text ?? ""
         
@@ -276,7 +290,7 @@ extension Internal {
 //        resultField.text = value
     }
     
-    func operationButtonTapped(_ sender: UIButton) {
+//    func operationButtonTapped(_ sender: UIButton) {
 //        var isEquals = false
 //        
 //        // uhvatiti sta pise na dugmetu
@@ -345,7 +359,7 @@ extension Internal {
 //        }
 //        self.didUntouchButton(sender)
         
-    }
+//    }
 }
 
 
