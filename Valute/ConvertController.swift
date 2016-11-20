@@ -126,7 +126,7 @@ class ConvertController: UIViewController {
     
     // TOUCHES
     
-    var buttonOriginalColor: UIColor?
+    var buttonOriginalBackgroundColor: UIColor?
     
     ////////////////////////////
 }
@@ -160,10 +160,42 @@ extension UISetup {
     
     
     func didTouchButton(_ sender: UIButton){
+        buttonOriginalBackgroundColor = sender.backgroundColor
+        
+        // prvo, ako nema boje, koristiti veoma providnu crnu
+        guard let _ = sender.backgroundColor else {
+            sender.backgroundColor = UIColor.black.withAlphaComponent(0.2)
+            return
+        }
+        
+        // Posto je boja pozadine za dugmad vec delimicno providna,
+        // onda treba povecati alpha komponentu da bi se video tap
+        
+        // Evo nacina da se izvuku RGBA komponente iz UIColor
+        // postaviti podrazumevanu (crna)
+        
+        var r: CGFloat = 0
+        var g: CGFloat = 0
+        var b: CGFloat = 0
+        // i providnost namestiti na 20%
+        var a: CGFloat = 0.2
+        
+        // ovaj metod ce dodati komponentama navedenim iznad za datu UIColor vrednost
+        guard let _ = sender.backgroundColor?.getRed(&r, green: &g, blue: &b, alpha: &a) else {
+            // ako ekstrakcija ne uspe, postaviti boju na crnu sa 20% providnosti
+            sender.backgroundColor = UIColor.black.withAlphaComponent(0.2)
+            return
+        }
+        
+        // ako uspe, onda postavi boju sa duplom vrednosti alpha komponente
+        sender.backgroundColor = UIColor(red: r, green: g, blue: b, alpha: a*2)
         
     }
     
     func didUntouchButton(_ sender: UIButton) {
+        
+        sender.backgroundColor = buttonOriginalBackgroundColor
+        buttonOriginalBackgroundColor = nil
         
     }
     
