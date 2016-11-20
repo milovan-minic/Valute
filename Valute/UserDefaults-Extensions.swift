@@ -8,33 +8,33 @@
 
 import Foundation
 
-enum UserDefaultKeys: String {
-    case sourceCurrencyCode
-    case targetCurrencyCode
+enum Key: String {
+    case source
+    case target
 }
 
 extension UserDefaults {
     static var sourceCurrencyCode: String? {
         get {
             let defs = UserDefaults.standard
-            return defs.string(forKey: UserDefaultKeys.sourceCurrencyCode.rawValue)
+            return defs.string(forKey: Key.source.rawValue)
         }
 
         set(value) {
             let defs = UserDefaults.standard
-            defs.set(value, forKey: UserDefaultKeys.sourceCurrencyCode.rawValue)
+            defs.set(value, forKey: Key.source.rawValue)
         }
     }
     
     static var targetCurrencyCode: String? {
         get {
             let defs = UserDefaults.standard
-            return defs.string(forKey: UserDefaultKeys.targetCurrencyCode.rawValue)
+            return defs.string(forKey: Key.target.rawValue)
         }
         
         set (value) {
             let defs = UserDefaults.standard
-            defs.set(value, forKey: UserDefaultKeys.targetCurrencyCode.rawValue)
+            defs.set(value, forKey: Key.target.rawValue)
         }
     }
 }
