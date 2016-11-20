@@ -117,7 +117,7 @@ class ConvertController: UIViewController {
     }
     
     // dodavanje trailingCurrencyBox-a kao target
-    var targgetCurrencyBox: CurrencyBox {
+    var targetCurrencyBox: CurrencyBox {
         return trailingCurrencyBox
     }
     
@@ -130,7 +130,7 @@ class ConvertController: UIViewController {
     }
     var targetCurrencyCode: String! {
         didSet {
-            targgetCurrencyBox.configure(withCurrencyCode: targetCurrencyCode)
+            targetCurrencyBox.configure(withCurrencyCode: targetCurrencyCode)
             UserDefaults.targetCurrencyCode = targetCurrencyCode
         }
     }
@@ -244,6 +244,11 @@ extension UISetup {
         
     }
     
+    func setupCurrencyBoxes() {
+        sourceCurrencyBox.delegate = self
+        targetCurrencyBox.delegate = self
+    }
+    
 }
 
 
@@ -258,6 +263,7 @@ extension ViewLifecycle {
         configureDecimalButton()
         cleanupUI()
         setupInitailCurrencies()
+        setupCurrencyBoxes()
     }
 }
 
@@ -381,6 +387,15 @@ extension Internal {
                 }
             })
         }
+    }
+}
+
+
+
+extension ConvertController: CurrencyBoxDelegate {
+    
+    func currencyBoxInitiatedChange(_ currencyBox: CurrencyBox) {
+        
     }
 }
 
