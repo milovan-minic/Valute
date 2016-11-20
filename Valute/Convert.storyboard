@@ -53,7 +53,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rkr-zd-XTx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="361" y="-636"/>
+            <point key="canvasLocation" x="361" y="900"/>
         </scene>
         <!--Currency Converter-->
         <scene sceneID="ubl-7a-bpL">
