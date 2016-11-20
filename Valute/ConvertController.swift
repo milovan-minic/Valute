@@ -37,15 +37,16 @@ class ConvertController: UIViewController {
             self.didUntouchButton(sender)
         }
     
-//    guard let numString = sender.title(for: .normal) else { return }
-//    var value = resultField.text ?? ""
+    guard let numString = sender.title(for: .normal) else { return }
+    var value = sourceCurrencyBox.ammountText ?? ""
     
-//    if value.contains(numString) {
-//        return
-//    }
+    if value.contains(numString) {
+        return
+    }
     
-//    value += numString
-//    resultField.text = value
+    value += numString
+    
+    sourceCurrencyBox.ammountText = value
     }
     
     
@@ -56,11 +57,12 @@ class ConvertController: UIViewController {
             self.didUntouchButton(sender)
         }
         
-//        var value = resultField.text ?? ""
-//        guard value.characters.count > 0 else { return }
-//        var chars = value.characters
-//        chars.removeLast()
-//        resultField.text = String(chars)
+        var value = sourceCurrencyBox.ammountText ?? ""
+        guard value.characters.count > 0 else { return }
+        
+        var chars = value.characters
+        chars.removeLast()
+        sourceCurrencyBox.ammountText = String(chars)
     }
     
     
