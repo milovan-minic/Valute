@@ -18,7 +18,7 @@ class ConvertController: UIViewController {
         return .lightContent
     }
     
-    let formatter : NumberFormatter = {
+    let formatter: NumberFormatter = {
         let nf = NumberFormatter()
         nf.numberStyle = .decimal
         return nf
@@ -268,13 +268,13 @@ typealias Internal = ConvertController
 extension Internal {
     
     func validateOperandInput() -> Double? {
-//    guard let numString = resultFieldText else {
-//        return nil
-//    }
-//    
-//    let num formater.number(from: numString)?.doubleValue
-//    return num
-    return 0
+    guard let numString = sourceCurrencyBox.ammountText else {
+        return nil
+    }
+
+    let num = formatter.number(from: numString)?.doubleValue
+    return num
+
 }
 
 
