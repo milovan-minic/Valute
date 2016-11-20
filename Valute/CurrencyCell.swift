@@ -23,5 +23,18 @@ class CurrencyCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
+    func configure(withCurrencyCode currencyCode: String) {
+        
+        // azuriraj labelu
+        currencyLabel.text = currencyCode
+        
+        // azuriraj zastavu koristeci Locale framework
+        guard let countryCode = Locale.countryCode(forCurrencyCode: currencyCode) else {
+            iconView.image = nil
+            return
+        }
+        
+        iconView.image = UIImage(named: countryCode.lowercased())
+    }
 }

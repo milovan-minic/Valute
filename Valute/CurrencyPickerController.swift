@@ -37,15 +37,16 @@ class CurrencyPickerController: UITableViewController {
         return dataSource.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CurrencyCell", for: indexPath) as! CurrencyCell
 
         // Configure the cell...
+        let currencyCode = dataSource[indexPath.row]
+        cell.configure(withCurrencyCode: currencyCode)
 
         return cell
     }
-    */
+
 
     /*
     // Override to support conditional editing of the table view.
