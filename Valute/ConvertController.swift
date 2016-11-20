@@ -284,11 +284,11 @@ extension Internal {
         
         guard let numString = sender.title(for: .normal) else { return }
         
-        var value = sourceCurrencyBox.textField.text ?? ""
+        var value = sourceCurrencyBox.ammountText ?? ""
         
         value += numString
         
-        sourceCurrencyBox.textField.text = value
+        sourceCurrencyBox.ammountText = value
         
     }
     

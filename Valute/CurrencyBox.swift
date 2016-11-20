@@ -22,6 +22,17 @@ class CurrencyBox: UIView {
     @IBOutlet weak var flagImageView: UIImageView!
     @IBOutlet weak var currencyCodeLabel: UILabel!
     
+    //	using computed property for both get/set
+    var ammountText: String? {
+        get {
+            return textField.text
+        }
+
+        set(str) {
+            textField.text = str
+        }
+    }
+    
     func configure(withCurrencyCode currencyCode: String) {
         // update label
         currencyCodeLabel.text = currencyCode
