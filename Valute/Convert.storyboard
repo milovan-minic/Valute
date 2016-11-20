@@ -36,7 +36,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="TtT-Lh-zJf">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="TtT-Lh-zJf" customClass="CurrencyCell" customModule="Valute" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TtT-Lh-zJf" id="YNI-FG-DgA">
@@ -363,13 +363,13 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mqm-v7-Sgf" userLabel="Penel">
-                                <rect key="frame" x="0.0" y="116" width="375" height="80"/>
+                                <rect key="frame" x="0.0" y="116.5" width="375" height="79.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JvL-Cx-TNc" userLabel="left" customClass="CurrencyBox" customModule="Valute" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="187" height="80"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="187" height="79.5"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0,00" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QAB-Mq-XIV" userLabel="leftTextFeld">
-                                                <rect key="frame" x="8" y="36" width="179" height="44"/>
+                                                <rect key="frame" x="8" y="36.5" width="179" height="43"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="36"/>
@@ -379,10 +379,10 @@
                                                 </connections>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F89-Qi-3O1" userLabel="leftFlagBox">
-                                                <rect key="frame" x="8" y="0.0" width="179" height="36"/>
+                                                <rect key="frame" x="8" y="0.0" width="179" height="36.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BRL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KmB-1N-DSg" userLabel="leftCurencyCode">
-                                                        <rect key="frame" x="24" y="8" width="31" height="20"/>
+                                                        <rect key="frame" x="24" y="8" width="31" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
@@ -391,7 +391,7 @@
                                                         <rect key="frame" x="0.0" y="10" width="16" height="16"/>
                                                     </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Xx-1w-jG8">
-                                                        <rect key="frame" x="0.0" y="0.0" width="179" height="36"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="179" height="36.5"/>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -426,29 +426,29 @@
                                         </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="liE-L7-WWC" userLabel="right" customClass="CurrencyBox" customModule="Valute" customModuleProvider="target">
-                                        <rect key="frame" x="188" y="0.0" width="187" height="80"/>
+                                        <rect key="frame" x="188" y="0.0" width="187" height="79.5"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0,00" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ub9-Of-vyQ" userLabel="rightTextField">
-                                                <rect key="frame" x="0.0" y="37" width="179" height="43"/>
+                                                <rect key="frame" x="0.0" y="36.5" width="179" height="43"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="36"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w7R-f1-GAG" userLabel="rightFlagBox">
-                                                <rect key="frame" x="0.0" y="0.0" width="179" height="37"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="179" height="36.5"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ae" translatesAutoresizingMaskIntoConstraints="NO" id="pSa-mj-a4f">
-                                                        <rect key="frame" x="163" y="10.5" width="16" height="16"/>
+                                                        <rect key="frame" x="163" y="10" width="16" height="16"/>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AED" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Enb-ET-soL">
-                                                        <rect key="frame" x="122" y="8" width="33" height="21"/>
+                                                        <rect key="frame" x="122" y="8" width="33" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Db-ap-DHh">
-                                                        <rect key="frame" x="0.0" y="0.0" width="179" height="37"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="179" height="36.5"/>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -496,7 +496,7 @@
                                 </constraints>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d9Y-bd-n8H" userLabel="spacerUp">
-                                <rect key="frame" x="374" y="64" width="1" height="52"/>
+                                <rect key="frame" x="374" y="64" width="1" height="52.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="1" id="CEu-cq-oVm"/>
