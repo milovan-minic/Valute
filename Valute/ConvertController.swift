@@ -277,17 +277,19 @@ extension Internal {
 
 
     func digitButtonTapped(_ sender: UIButton) {
-//        guard let numString = sender.title(for: .normal) else { return }
-        
-//        var value = resultField.text ?? ""
         
         defer {
             self.didUntouchButton(sender)
         }
         
-//        value += numString
+        guard let numString = sender.title(for: .normal) else { return }
         
-//        resultField.text = value
+        var value = sourceCurrencyBox.textField.text ?? ""
+        
+        value += numString
+        
+        sourceCurrencyBox.textField.text = value
+        
     }
     
 //    func operationButtonTapped(_ sender: UIButton) {
