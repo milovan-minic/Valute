@@ -403,6 +403,11 @@ extension ConvertController: CurrencyBoxDelegate {
         // zabelezi ko je je trazio promenu
         changeCurrencyBox = currencyBox
         
+        //	load and display the controller, without storyboard
+        let vc = CurrencyPickerController(style: .plain)
+        vc.delegate = self
+        show(vc, sender: self)
+        
     }
 }
 
