@@ -87,12 +87,13 @@ extension CurrencyPickerController {
 
 // MARK: - Search
 
-extension CurrencyPickerController {
+extension CurrencyPickerController: UISearchResultsUpdating {
     
     func setupSearch() {
         
         searchController = {
             let sc = UISearchController(searchResultsController: nil)
+            sc.searchResultsUpdater = self
             //
             sc.hidesNavigationBarDuringPresentation = false
             sc.dimsBackgroundDuringPresentation = false
@@ -104,6 +105,11 @@ extension CurrencyPickerController {
             
             return sc
         }()
+    }
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        self.searchString = searchController.searchBar.text
+        self.tableView.reloadData()
     }
     
 }
