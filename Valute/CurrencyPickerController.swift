@@ -37,12 +37,12 @@ class CurrencyPickerController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        tableView.backgroundView = UIImageView(image: UIImage(named: "globalbg"))
+        // Ovako se to iste postize u XCodee 8
+        // TODO: Dodati assete da bi ovo radilo
+        tableView.backgroundView = UIImageView(image: #imageLiteral(resourceName: "globalbg") )
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         setupSearch()
     }
 }
