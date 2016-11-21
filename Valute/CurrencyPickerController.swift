@@ -8,6 +8,12 @@
 
 import UIKit
 
+protocol CurrencyPickerControllerDelegate: class {
+    
+    func currencyPicker(controller: CurrencyPickerController, didSelect currencyCode: String)
+    
+}
+
 class CurrencyPickerController: UITableViewController {
     
     var dataSource: [String] {
