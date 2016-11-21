@@ -400,6 +400,16 @@ extension ConvertController: CurrencyBoxDelegate {
 }
 
 
+extension ConvertController: CurrencyPickerControllerDelegate {
+    // Step4: adopt the protocol and implement the required method
+
+    func currencyPicker(controller: CurrencyPickerController, didSelect currencyCode: String) {
+        // update the currency...
+        // which box?
+    }
+}
+
+
 
 
 
