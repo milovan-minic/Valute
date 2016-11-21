@@ -30,7 +30,7 @@
         <!--Currency Picker Controller-->
         <scene sceneID="S2j-Rf-SEL">
             <objects>
-                <tableViewController storyboardIdentifier="CurrencyPickerController" id="ktf-Qu-GME" customClass="CurrencyPickerController" customModule="ConvertController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="CurrencyPickerController" id="ktf-Qu-GME" customClass="CurrencyPickerController" customModule="Valute" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="8oL-mQ-k61">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
