@@ -43,6 +43,7 @@ class CurrencyPickerController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        setupSearch()
     }
 }
 
@@ -83,3 +84,58 @@ extension CurrencyPickerController {
         delegate?.currencyPicker(controller: self, didSelect: currencyCode)
     }
 }
+
+// MARK: - Search
+
+extension CurrencyPickerController {
+    
+    func setupSearch() {
+        
+        searchController = {
+            let sc = UISearchController(searchResultsController: nil)
+            //
+            sc.hidesNavigationBarDuringPresentation = false
+            sc.dimsBackgroundDuringPresentation = false
+            
+            //
+            sc.searchBar.searchBarStyle = UISearchBarStyle.prominent
+            self.navigationItem.titleView = sc.searchBar
+            sc.searchBar.sizeToFit()
+            
+            return sc
+        }()
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
