@@ -25,6 +25,12 @@ class CurrencyPickerController: UITableViewController {
     
     var dataSource: [String] {
         let baseArray = Locale.commonISOCurrencyCodes
+        // Ako je search string popunjen, treba suziti izbor na osnovu njega
+        if let str = searchString {
+            if str.characters.count > 0 {
+                return baseArray.filter( {$0.localizedCaseInsensitiveContains(str)} )
+            }
+        }
         return baseArray
     }
 
