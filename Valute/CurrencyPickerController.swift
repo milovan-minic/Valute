@@ -21,6 +21,8 @@ class CurrencyPickerController: UITableViewController {
     // Whoever wants to become a delegate for this controller, should be assigned to this property
     weak var delegate: CurrencyPickerControllerDelegate? = nil
     
+    var searchString: String?
+    
     var dataSource: [String] {
         let baseArray = Locale.commonISOCurrencyCodes
         return baseArray
