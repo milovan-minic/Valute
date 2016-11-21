@@ -105,6 +105,10 @@ class ConvertController: UIViewController {
     
     // CURRENCIES
     
+    //	ovo treba da bude referenca na currencybox koji je inicirao promenu
+    //	pa onda delegate poziv na osnovu ovoga zna šta da radi
+    var changeCurrencyBox: CurrencyBox? = nil
+    
     // sakrijem znak =, a prikazem operator
     
     @IBOutlet weak var leadingCurrencyBox: CurrencyBox!
