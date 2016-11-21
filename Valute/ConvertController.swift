@@ -429,6 +429,8 @@ extension ConvertController: CurrencyPickerControllerDelegate {
             targetCurrencyCode = currencyCode
         }
         changeCurrencyBox = nil
+        
+        _ = navigationController?.popViewController(animated: true)
     }
 }
 
