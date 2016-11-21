@@ -63,4 +63,14 @@ extension CurrencyPickerController {
 
 extension CurrencyPickerController {
     
+    /// Step 3: implement the action of delegator delivering the work to its delegate, at one or more points
+    ///
+    /// - Parameters:
+    ///   - tableView: tableView description
+    ///   - indexPath: indexPath description
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let currencyCode = dataSource[indexPath.row]
+        delegate?.currencyPicker(controller: self, didSelect: currencyCode)
+    }
 }
