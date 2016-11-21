@@ -419,8 +419,16 @@ extension ConvertController: CurrencyPickerControllerDelegate {
     // Step4: adopt the protocol and implement the required method
 
     func currencyPicker(controller: CurrencyPickerController, didSelect currencyCode: String) {
-        // update the currency...
-        // which box?
+        
+        //	ok, now update as needed
+        guard let changeBox = changeCurrencyBox else { return }
+        
+        if changeBox === sourceCurrencyBox {
+            sourceCurrencyCode = currencyCode
+        } else {
+            targetCurrencyCode = currencyCode
+        }
+        changeCurrencyBox = nil
     }
 }
 
