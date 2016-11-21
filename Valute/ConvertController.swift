@@ -404,7 +404,10 @@ extension ConvertController: CurrencyBoxDelegate {
         changeCurrencyBox = currencyBox
         
         //	load and display the controller, without storyboard
-        let vc = CurrencyPickerController(style: .plain)
+        let storyboard = UIStoryboard(na≈me: "Convert", bundle: nil)
+        guard let vc = storyboard.instantiateViewController(withIdentifier: "CurrencyPickerController") as? CurrencyPickerController else {
+            fatalError("Failed to create instance of CurrencyPickerController from \(storyboard)")
+        }
         vc.delegate = self
         show(vc, sender: self)
         
