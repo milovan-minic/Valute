@@ -28,7 +28,7 @@ class CurrencyCell: UITableViewCell {
         
         // azuriraj zastavu koristeci Locale framework
         guard let countryCode = Locale.countryCode(forCurrencyCode: currencyCode) else {
-            iconView.image = nil
+            iconView.image = #imageLiteral(resourceName: "empty")
             return
         }
         
