@@ -400,6 +400,9 @@ extension ConvertController: CurrencyBoxDelegate {
     
     func currencyBoxInitiatedChange(_ currencyBox: CurrencyBox) {
         
+        // zabelezi ko je je trazio promenu
+        changeCurrencyBox = currencyBox
+        
     }
 }
 
