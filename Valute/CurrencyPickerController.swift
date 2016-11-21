@@ -22,6 +22,7 @@ class CurrencyPickerController: UITableViewController {
     weak var delegate: CurrencyPickerControllerDelegate? = nil
     
     var searchString: String?
+    var searchController: UISearchController?
     
     var dataSource: [String] {
         let baseArray = Locale.commonISOCurrencyCodes
