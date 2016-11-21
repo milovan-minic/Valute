@@ -12,6 +12,8 @@
 		E80DAF9F1DE1DC0B005E6B7A /* UserDefaults-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80DAF9E1DE1DC0A005E6B7A /* UserDefaults-Extensions.swift */; };
 		E80DAFA11DE1E31A005E6B7A /* CurrencyPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80DAFA01DE1E31A005E6B7A /* CurrencyPickerController.swift */; };
 		E80DAFA71DE1E730005E6B7A /* CurrencyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80DAFA61DE1E730005E6B7A /* CurrencyCell.swift */; };
+		E80DAFB01DE3589A005E6B7A /* Flags.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E80DAFAF1DE3589A005E6B7A /* Flags.xcassets */; };
+		E80DAFB21DE358A9005E6B7A /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E80DAFB11DE358A9005E6B7A /* Icons.xcassets */; };
 		E8B4E5A41DC26D3800466474 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B4E5A31DC26D3800466474 /* AppDelegate.swift */; };
 		E8B4E5AB1DC26D3800466474 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8B4E5AA1DC26D3800466474 /* Assets.xcassets */; };
 		E8B4E5AE1DC26D3800466474 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8B4E5AC1DC26D3800466474 /* LaunchScreen.storyboard */; };
@@ -26,6 +28,8 @@
 		E80DAF9E1DE1DC0A005E6B7A /* UserDefaults-Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefaults-Extensions.swift"; sourceTree = "<group>"; };
 		E80DAFA01DE1E31A005E6B7A /* CurrencyPickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyPickerController.swift; sourceTree = "<group>"; };
 		E80DAFA61DE1E730005E6B7A /* CurrencyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyCell.swift; sourceTree = "<group>"; };
+		E80DAFAF1DE3589A005E6B7A /* Flags.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Flags.xcassets; path = ../../../Alek/Valute/Valute/Icons.xcassets/Flags.xcassets; sourceTree = "<group>"; };
+		E80DAFB11DE358A9005E6B7A /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
 		E8B4E5A01DC26D3800466474 /* Valute.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Valute.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8B4E5A31DC26D3800466474 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8B4E5AA1DC26D3800466474 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -47,6 +51,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E80DAFA81DE3563C005E6B7A /* Supportinf Files */ = {
+			isa = PBXGroup;
+			children = (
+				E8B4E5AA1DC26D3800466474 /* Assets.xcassets */,
+				E8B4E5AC1DC26D3800466474 /* LaunchScreen.storyboard */,
+				E8B4E5AF1DC26D3800466474 /* Info.plist */,
+			);
+			name = "Supportinf Files";
+			sourceTree = "<group>";
+		};
+		E80DAFA91DE35662005E6B7A /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				E8F0AAF41DC9191F00764544 /* App.xcassets */,
+				E80DAFAF1DE3589A005E6B7A /* Flags.xcassets */,
+				E80DAFB11DE358A9005E6B7A /* Icons.xcassets */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		E80DAFAA1DE35679005E6B7A /* Converter */ = {
+			isa = PBXGroup;
+			children = (
+				E8F0AAF61DC91CBB00764544 /* Convert.storyboard */,
+				E8F0AAF81DC92B5600764544 /* ConvertController.swift */,
+				E80DAF9A1DDB732D005E6B7A /* CurrencyBox.swift */,
+			);
+			name = Converter;
+			sourceTree = "<group>";
+		};
+		E80DAFAB1DE35684005E6B7A /* Picker */ = {
+			isa = PBXGroup;
+			children = (
+				E80DAFA01DE1E31A005E6B7A /* CurrencyPickerController.swift */,
+				E80DAFA61DE1E730005E6B7A /* CurrencyCell.swift */,
+			);
+			name = Picker;
+			sourceTree = "<group>";
+		};
+		E80DAFAC1DE3568F005E6B7A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E80DAF9C1DE07B2C005E6B7A /* Locale-Extension.swift */,
+				E80DAF9E1DE1DC0A005E6B7A /* UserDefaults-Extensions.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		E8B4E5971DC26D3800466474 = {
 			isa = PBXGroup;
 			children = (
@@ -67,17 +119,11 @@
 			isa = PBXGroup;
 			children = (
 				E8B4E5A31DC26D3800466474 /* AppDelegate.swift */,
-				E8B4E5AA1DC26D3800466474 /* Assets.xcassets */,
-				E8B4E5AC1DC26D3800466474 /* LaunchScreen.storyboard */,
-				E8F0AAF41DC9191F00764544 /* App.xcassets */,
-				E8F0AAF61DC91CBB00764544 /* Convert.storyboard */,
-				E8F0AAF81DC92B5600764544 /* ConvertController.swift */,
-				E80DAFA01DE1E31A005E6B7A /* CurrencyPickerController.swift */,
-				E80DAF9E1DE1DC0A005E6B7A /* UserDefaults-Extensions.swift */,
-				E80DAF9A1DDB732D005E6B7A /* CurrencyBox.swift */,
-				E80DAFA61DE1E730005E6B7A /* CurrencyCell.swift */,
-				E80DAF9C1DE07B2C005E6B7A /* Locale-Extension.swift */,
-				E8B4E5AF1DC26D3800466474 /* Info.plist */,
+				E80DAFA81DE3563C005E6B7A /* Supportinf Files */,
+				E80DAFA91DE35662005E6B7A /* Assets */,
+				E80DAFAA1DE35679005E6B7A /* Converter */,
+				E80DAFAB1DE35684005E6B7A /* Picker */,
+				E80DAFAC1DE3568F005E6B7A /* Extensions */,
 			);
 			path = Valute;
 			sourceTree = "<group>";
@@ -141,9 +187,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E80DAFB01DE3589A005E6B7A /* Flags.xcassets in Resources */,
 				E8B4E5AE1DC26D3800466474 /* LaunchScreen.storyboard in Resources */,
 				E8B4E5AB1DC26D3800466474 /* Assets.xcassets in Resources */,
 				E8F0AAF71DC91CBB00764544 /* Convert.storyboard in Resources */,
+				E80DAFB21DE358A9005E6B7A /* Icons.xcassets in Resources */,
 				E8F0AAF51DC9191F00764544 /* App.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "15A1E539D8CFF41F3382510DBA390210DE10DB81",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "15A1E539D8CFF41F3382510DBA390210DE10DB81" : 9223372036854775807,
+    "0CAB2C2470C0F1E7CC327FF7B7563567772D51AC" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "68A91020-4AA1-4593-B826-0B0BFB959626",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "15A1E539D8CFF41F3382510DBA390210DE10DB81" : "Valute\/",
+    "0CAB2C2470C0F1E7CC327FF7B7563567772D51AC" : "..\/Alek\/Valute"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Valute",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Valute.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "git.iosakademija.com:ios-akademija-5\/valute.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0CAB2C2470C0F1E7CC327FF7B7563567772D51AC"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "git.iosakademija.com:milovan.minic\/valute.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "15A1E539D8CFF41F3382510DBA390210DE10DB81"
+    }
+  ]
+}
