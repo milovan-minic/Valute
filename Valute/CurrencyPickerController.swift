@@ -16,6 +16,11 @@ protocol CurrencyPickerControllerDelegate: class {
 
 class CurrencyPickerController: UITableViewController {
     
+    // Step 2 - Implementation of Delegate Pattern in iOS:
+    // Create a weak optional property using this new protocol data type
+    // Whoever wants to become a delegate for this controller, should be assigned to this property
+    weak var delegate: CurrencyPickerControllerDelegate? = nil
+    
     var dataSource: [String] {
         let baseArray = Locale.commonISOCurrencyCodes
         return baseArray
